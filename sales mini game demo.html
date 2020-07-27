@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sales Game</title>
+  </head>
+<body>
+    <header>
+        <h1>Sales game Demo</h1>
+        <li>Click "Begin game"</li>
+        <li>Click "Generate Sales Data"</li>
+        <li>Click "Sales by Region"</li>
+        <li>Populate Region / Product and Trend Data</li>
+        <li>Click "Stop timer"</li>
+        <h5>good luck! - oh and this version is on the honor system, in rl the user would have to get the inputs correct before stopping the timer</h5>
+        <hr>
+    </header>
+    <article>
+        <header>
+          <h2>Score:</h2>
+        </header>
+    </article>
+    <article>
+        <header>
+          <h2><p id="demo">1000</p></h2>
+        </header>
+    </article>
+   
+    <button onclick="clock(); document.getElementById('demo').innerHTML='1000';">Begin game</button>
+    <button onclick="clearInterval(myTimer);">Stop timer</button>
+    <br>
+    <br>
+    <input type="button" onclick="createTable()" value="Generate Sales Data"> 
+    <br>
+    <br>
+    <input type="button" onclick="createTable2()" value="Sales by Region">
+    <br>
+    <br>
+    <table id="salesbyregion" border="1" width="25%" height="25%">
+        <tr align="center">
+            <th>Region</th>
+            <th>Product</th>
+        </tr>
+    </table>
+    <article>
+        <header>
+          <h4>Use data maniuplation tool to find total sales by product and region:</h4>
+        </header>
+    </article>
+    <label for="quantity">Sales by Region:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="100000000">
+    <br>
+    <article>
+        <header>
+          <h4>Use data visiualization highest sales by product and region:</h4>
+        </header>
+    </article>
+    <table id="example" class="display" style="width:25%">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Product</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td><select size="1" id="row-1-office" name="row-1-office">
+                    <option value="" selected="selected">
+                        
+                    </option>
+                    <option value="North">
+                        North
+                    </option>
+                    <option value="South">
+                        South
+                    </option>
+                    <option value="East">
+                        East
+                    </option>
+                    <option value="West">
+                        West
+                    </option>
+                </select></td>
+                <td><select size="1" id="row-1-office" name="row-1-office">
+                    <option value="" selected="selected">
+                        
+                    </option>
+                    <option value="Rock">
+                        Rock
+                    </option>
+                    <option value="Paper">
+                        Paper
+                    </option>
+                    <option value="Scissors">
+                        Scissors
+                    </option>
+                </select></td>
+            </tr>
+        </tbody>
+    </table>
+        <br>
+        <br>
+        <br>
+        <button onclick="exportTableToCSV('sales.csv')">Export Sales Data</button>
+        <br>
+        <br>
+        <table id="myTable" border="1"> 
+            <tr>
+                <th>Region</th>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Price</th>
+            </tr>
+        </table>
+
+
+
+    <script src="stopwatch - Copy.js" charset="utf-8" type="text/javascript"></script>
+
+</body>
+
+</html>
